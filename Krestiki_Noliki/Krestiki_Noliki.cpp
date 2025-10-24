@@ -2,6 +2,12 @@
 
 using namespace std;
 
+void Rules() {
+	cout << "Правила:\nа. Игроки играют поочерёдно. \n";
+	cout << "b. Один играет крестиками, другой - ноликами. \n";
+	cout << "c. Игрок не может сделать ход вне своего хода. \n \n";
+}
+
 int Inputcorrectness(char a, int* i) {
 	if (a == 'x' || a == '0') {
 		cout << "\nПРЕДУПРЕЖДЕНИЕ: Данное поле уже занято, выберите другое \n";
@@ -21,6 +27,7 @@ void PrintArr(char a[3][3]) {
 int main() {
 	setlocale(LC_ALL, "");
 
+	Rules();
 
 	char a[3][3] = { {' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '} };
 	char X = 'x', O = '0';
